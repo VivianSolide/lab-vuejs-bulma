@@ -35,8 +35,8 @@ Vue.component('b-modal', {
   <div class="modal" :class="isModalActive ? 'is-active' : ''">
     <div class="modal-background"></div>
       <div class="modal-content">
-        <h2>{{ country }}</h2>
-        <p>The capital of {{ country }} is {{ capital }}</p>
+        <h2 class="title is-3" style="color:white">{{ country }}</h2>
+        <p class="strong" style="color:white">The capital of {{ country }} is {{ capital }}</p>
       </div>
       <button class="modal-close is-large" aria-label="close" @click="isModalActive=false"></button>
     </div>
