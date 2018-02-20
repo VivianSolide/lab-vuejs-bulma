@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- TODO: include Bulma's style and your own style -->
+  <link rel="stylesheet" href="https://unpkg.com/buefy@0.6.3/lib/buefy.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
   <title>Vue.js | Bulma</title>
 </head>
-<body>
 
+<body>
   <!-- TODO: Include your Vue.js app -->
   
+  <section class="hero" id="app">
+    <div class="container">
+      <bulma-message 
+        header="Hello Ironhacker" 
+        body="I created this awesome website during my Ironhack bootcamp.">
+      </bulma-message>
+    </div>
+  </section>
+
   <!-- TODO: Include scripts -->
+  <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+  <script src="https://unpkg.com/buefy@0.6.3/lib/index.js"></script>
+  <script src="index.js"></script>
 </body>
+
 </html>
