@@ -14,13 +14,28 @@
 
 <body>
   <!-- TODO: Include your Vue.js app -->
-  
+
   <section class="hero" id="app">
     <div class="container">
+      <h1 class="title is-1">Welcome to my Bulma Website!</h1>
+      <h2 class="title is-2">Messages</h2>
+      <!-- Messages -->
       <bulma-message 
         header="Hello Ironhacker" 
         body="I created this awesome website during my Ironhack bootcamp.">
       </bulma-message>
+      <bulma-message 
+        header="Salut Patrick" 
+        body="Lorem ipsum dolor sit amet">
+      </bulma-message>
+      <!-- /Messages -->
+      <h2 class="title is-2">Capital Modals</h2>
+      <!-- Modals -->
+      <b-button 
+        @click="isModalActive = true"
+        country="France">
+      </b-button>
+      <!-- /Modals -->
     </div>
   </section>
 
