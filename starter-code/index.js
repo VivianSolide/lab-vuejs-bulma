@@ -49,18 +49,27 @@ Vue.component('b-modal', {
     };
   },
 
-  methods: {
-    closeModal: function () {
-      this.isModalActive = true;
-    }
-  },
-
   props: {
     country: String,
     capital: String,
     active: Boolean
   },
 
+});
+
+Vue.component('bulma-breadcrumb', {
+  template: `
+
+  `,
+
+  data () {
+
+  },
+
+  props : {
+
+  },
+  
 });
 
 var vm = new Vue({
