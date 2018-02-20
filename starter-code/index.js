@@ -24,24 +24,22 @@ Vue.component('bulma-message', {
 
 });
 
-Vue.component('b-button', {
-  template: `
-  <button class="button is-primary is-medium">{{ country }}</button>
-  `,
-
-  props: {
-    country: String
-  }
-
-});
-
 Vue.component('b-modal', {
   template: `
-  <div class="modal">
+  <div>
+  <button 
+    class="button is-primary is-medium"
+    @click="isModalActive=true"
+  > {{ country }} </button>
+
+  <div class="modal" :class="isModalActive ? 'is-active' : ''">
     <div class="modal-background"></div>
-    <div class="modal-content">
+      <div class="modal-content">
+        <h2>{{ country }}</h2>
+        <p>The capital of {{ country }} is {{ capital }}</p>
+      </div>
+      <button class="modal-close is-large" aria-label="close" @click="isModalActive=false"></button>
     </div>
-    <button class="modal-close is-large" aria-label="close"></button>
   </div>
   `,
 
@@ -51,14 +49,34 @@ Vue.component('b-modal', {
     };
   },
 
+  methods: {
+    closeModal: function () {
+      this.isModalActive = true;
+    }
+  },
+
   props: {
     country: String,
-    capital: String
-  }
+    capital: String,
+    active: Boolean
+  },
 
 });
 
 var vm = new Vue({
   el: "#app",
+  data: {
+    countries: [{
+      name: 'France',
+      capital: 'Paris'
+    }, {
+      name: 'Spain',
+      capital: 'Madrid'
+    }, {
+      name: 'USA',
+      capital: 'Washington D.C.'
+    }
+    ]
+  }
 });
 
