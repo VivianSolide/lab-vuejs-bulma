@@ -57,19 +57,20 @@ Vue.component('b-modal', {
 
 });
 
-Vue.component('bulma-breadcrumb', {
+Vue.component('bulma-breadcrumbs', {
   template: `
-
+  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul><slot></slot></ul>
+  </nav>
   `,
 
-  data () {
+});
 
-  },
+Vue.component('bulma-breadcrumb-link',{
+  template: `
+    <li><slot>Some text</slot></li>
+  `,
 
-  props : {
-
-  },
-  
 });
 
 var vm = new Vue({
